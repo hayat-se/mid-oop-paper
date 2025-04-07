@@ -41,21 +41,6 @@ class Laptop
     }
 };
 
-int findObject(int ramSize , Laptop laptop[3])
-{
-    for(int i=0 ; i<3 ; i++)
-    {
-        if(ramSize == laptop[i].getRamCapacity())
-        {
-            return i+1;
-        }else
-        {
-            return 0;
-        }
-    }
-}
-
-
 int main()
 {
     Laptop laptops[3];
@@ -80,23 +65,12 @@ int main()
         laptops[i].setRamCapacity(ram_cap);
     }
 
-    // for(int i=0 ; i<2 ; i++)
-    // {
-    //     cout<<"Sound Card Company Name :"<<laptops[i].getS_Card() <<endl;
-    //     cout<<"Graphic Card Company Name :"<<laptops[i].getG_Card() <<endl;
-    //     cout<<"Processor Company Name :"<<laptops[i].getProcesssor() <<endl;
-    //     cout<<"Hard Drive Capacity :"<<laptops[i].getHdCapacity() <<endl;
-    //     cout<<"Ram capacity:"<<laptops[i].getRamCapacity() <<endl;
-    // }
-
-    int ramFind;
-    cout<<"Enter Ram to compare : ";
-    cin>>ramFind ;
-    if(findObject(ramFind , laptops) >= 1)
+    for(int i=0 ; i<2 ; i++)
     {
-        cout<<"Object finded : \n";
-        cout<<"The Number of Laptop is : "<<findObject(ramFind , laptops);
-    }else{
-        cout<<"Laptop not found \n";
+        cout<<"Sound Card Company Name :"<<laptops[i].getS_Card() <<endl;
+        cout<<"Graphic Card Company Name :"<<laptops[i].getG_Card() <<endl;
+        cout<<"Processor Company Name :"<<laptops[i].getProcesssor() <<endl;
+        cout<<"Hard Drive Capacity :"<<laptops[i].getHdCapacity() <<endl;
+        cout<<"Ram capacity:"<<laptops[i].getRamCapacity() <<endl;
     }
 }
